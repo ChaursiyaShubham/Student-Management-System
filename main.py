@@ -1,4 +1,4 @@
-# student management system in python
+# student management system
 students = []
 # new student detail for adding in the list
 def add_student():
@@ -17,7 +17,7 @@ def add_student():
     students.append(student) #if new student want to add in the list
     print("Student added successfully")
 
-# view the student detials in the list
+# view the student details in the list
 def view_students():
     if len(students) == 0:
         print("Student records is not found.")
@@ -25,19 +25,19 @@ def view_students():
 
     print("\n-- Student Records --")
 
-    #if  student detial is available in the list
+    #if  student detail is available in the list
     for student in students:
         print("Name:", student["name"])
-        print("Registration No:", student["reg_no"])
+        print("Registration No:", student["registration_no"])
         print("Branch:", student["branch"])
         print("Marks:", student["marks"])
         print("---------------------")
 
-# for searching the student detial in the list
+# for searching the student detail in the list
 def search_student():
     reg_no = input("Enter registration number to search: ")
 
-    #if  student detial is available in the list
+    #if  student detail is available in the list
     for student in students:
         if student["registration_no"] == reg_no:
             print("\nStudent Found successful")
@@ -45,14 +45,14 @@ def search_student():
             print("Branch:", student["branch"])
             print("Marks:", student["marks"])
             return
-# if student detial is not available in the list then
+# if student detail is not available in the list then
     print("Student is not found.")
 
 # for correction of student marks in the list
 def update_student():
     reg_no = input("Enter registration number: ")
 
-    # if student detial is available in the list then we change the marks
+    # if student detail is available in the list then we change the marks
     for student in students:
         if student["registration_no"] == reg_no:
             print("Current marks:", student["marks"])
@@ -62,10 +62,10 @@ def update_student():
 
             print("Student record updated successfully")
             return
-    #  if student detial is not available in the list then
+    #  if student detail is not available in the list then
     print("Student not found.")
 
-# if other student detial add in the list then using the function and delete the student
+# if other student detail add in the list then using the function and delete the student
 def delete_student():
     reg_no = input("Enter registration number: ")
 
@@ -74,14 +74,14 @@ def delete_student():
             students.remove(student)
             print("Student deleted successfully")
             return
-    #  if student detial is not available in the list then
+    #  if student detail is not available in the list then
     print("Student is not found.")
 
 # for calculating the grade 
 def calculate_grade():
     reg_no = input("Enter registration number: ")
 
-    # if student detial is available in list then check the marks and convert in gread
+    # if student detail is available in list then check the marks and convert in gread
     for student in students:
         if student["registration_no"] == reg_no:
 
@@ -104,7 +104,7 @@ def calculate_grade():
             print("Marks:", marks)
             print("Grade:", grade)
             return
-    #  if student detial is not available in the list then
+    #  if student detail is not available in the list then
     print("Student not found.")
 
 # using loop for run the code infinite times
